@@ -1,0 +1,58 @@
+.acardeion > div > span
+{
+    display: block;
+    background-color: #eee;
+    cursor: pointer;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+
+}
+.acardeion>div:last-child>span{
+    border-bottom: 0;
+}
+.acardeion >div >span::after
+{
+    content: "\002b";
+    float: right;
+}
+.acardeion >div:first-child >span
+{
+    border-radius: 10px 10px 0 0 ;
+}
+.acardeion >div:last-child > span
+{
+    border-radius: 0 0 10px 10px ;
+}
+.acardeion >div.show:last-child > span
+{
+    border-radius: 0;
+}
+.acardeion >div.show >div{
+    border-bottom: 1px solid #ccc;
+}
+
+
+.acardeion >div.show >span::after
+{
+    content: '\2212';
+}
+
+
+.acardeion > div.show>span,
+.acardeion>div>span:hover
+{
+    background-color: #ccc;
+}
+.acardeion > div >div{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    max-height:0;
+    overflow: hidden ;
+    transition: all 0.5s;
+    padding:0 15px;
+
+}
+.acardeion > div.show >div{
+    /* max-height: 200px; */
+    padding: 15px;
+}
